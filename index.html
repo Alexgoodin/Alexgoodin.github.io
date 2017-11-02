@@ -10,9 +10,7 @@
 
   <body bgcolor= #4d6a8a>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-<div id= sidebar>
+<div id= sidebar onclick="sidebarOpen()">
 <ul>
 <li><a href=index>Home</a></li>
 <li><a href=ourproductspage>Products</a></li>
@@ -25,8 +23,11 @@
 </div>
 
 <script>
-function sidebar() {
-  $(“#sidebar”).toggleClass(“visible”);
+function sidebarOpen() {
+  document.getElementByClassName('visible');
+}
+function sidebarClose() {
+  document.getElementByClassName('sidebar');
 }
 </script>
 
@@ -99,6 +100,9 @@ h4 {
   left: -200px;
   }
 
+#sidebar.visible {
+  left: 0px
+    }
 #sidebar ul {
   margin: 0px;
   padding: 0px;
@@ -139,15 +143,6 @@ h4 {
 
 #sidebar:hover {
   background-color: rgb(68,95,129);
-  font-size: 30px;
-  }
-
-#sidebar:checked {
-  left: 0px;
-  }
-
-#sidebar:target {
-  left: 0px;
   }
   </style>
 
