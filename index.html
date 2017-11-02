@@ -10,7 +10,9 @@
 
   <body bgcolor= #4d6a8a>
 
-<div id= sidebar onclick=“toggleClass(“visible”)>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<div id= sidebar class=“myFunction()”>
 <ul>
 <li><a href=index>Home</a></li>
 <li><a href=ourproductspage>Products</a></li>
@@ -21,6 +23,12 @@
 <span></span>
 </div>
 </div>
+
+<script>
+function myFunction() {
+  $(“#sidebar”).toggleClass(“visible”);
+}
+</script>
 
 <div class= title>
 <h1>
