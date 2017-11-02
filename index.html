@@ -10,7 +10,7 @@
 
   <body bgcolor= #4d6a8a>
 
-<div class= sidebar>
+<div id= sidebar>
 <ul>
 <li><a href=index>Home</a></li>
 <li><a href=ourproductspage>Products</a></li>
@@ -27,7 +27,7 @@
 <script>
 $(document).ready(function() {
 $(‘.hotdog’).click(function() {
-$(‘.sidebar’).toggleClass(‘visible’);
+$(‘#sidebar’).toggleClass(‘visible’);
 });
 });
 </script>
@@ -88,7 +88,7 @@ h4 {
   padding: 4px;
     }
 
-.sidebar {
+#sidebar {
   margin: 0px;
   padding: 0px;
   font-family: sans-serif;
@@ -102,16 +102,16 @@ h4 {
   transition: left 0.3s linear;
   }
 
-.sidebar ul {
+#sidebar ul {
   margin: 0px;
   padding: 0px;
   }
 
-.sidebar ul li {
+#sidebar ul li {
   list-style: none;
   }
 
-.sidebar ul li a {
+#sidebar ul li a {
   color: white;
   border-bottom: 1px solid white;
   display: block;
@@ -120,7 +120,7 @@ h4 {
   text-decoration: none;
   }
 
-.sidebar.visible {
+#sidebar.visible {
   left: 0px;
   transition: left 0.3s linear;
   }
