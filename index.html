@@ -10,15 +10,29 @@
 
   <body bgcolor= #4d6a8a>
 
-<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-  <a href=index class="w3-bar-item w3-button">Home</a>
-  <a href=productspage class="w3-bar-item w3-button">Products</a>
-  <a href=about class="w3-bar-item w3-button">About</a>
+<div class= sidebar>
+<ul>
+<li><a href=index>Home</a></li>
+<li><a href=ourproductspage>Products</a></li>
+</ul>
 </div>
 
-<div class="w3-teal">
-  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+<div class= hotdog>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script>
+$(document).ready(function() {
+$(‘.hotdog’).click(function() {
+$(‘.sidebar’).toggleClass(‘visible’);
+});
+});
+
+</script>
 
 <div class= title>
 <h1>
@@ -28,7 +42,7 @@ Goody Sells.
 
 <div class= catchphrase>
 <h4>
-Always<br>Cheapest Price.<br><br>
+Cheapest Price.<br>Always.<br><br>
 </h4>
 </div>
 
@@ -80,25 +94,55 @@ h4 {
   margin: 0px;
   padding: 0px;
   font-family: sans-serif;
-  color: white;
-  position: fixed;
+  background: #45607c;
   width: 200px;
   height: 100%;
-  background: rgb(69, 96, 124);
-}
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: -200px;
+  transition: left 0.3s linear;
+  }
 
-#hotdog {
+.sidebar ul {
   margin: 0px;
   padding: 0px;
-  font-family: sans-serif;
-  color: white;
-}
+  }
 
 .sidebar ul li {
   list-style: none;
+  }
+
+.sidebar ul li a {
+  color: white;
+  border-bottom: 1px solid white;
+  display: block;
+  width: 159px;
   padding: 20px;
-  border-bottom: 1px solid rgb(255, 255, 255);
-}
+  text-decoration: none;
+  }
+
+.sidebar.visible {
+  left: 0px;
+  transition: left 0.3s linear;
+  }
+
+.hotdog {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 15px;
+  cursor: pointer;
+  margin: 20px;
+  }
+
+.hotdog span {
+  height: 1px;
+  background: white;
+  margin-bottom: 5px;
+  display: block;
+  border-radius: 1px;
+  }
 
   </style>
 
