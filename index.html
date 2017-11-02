@@ -15,21 +15,23 @@
 <li><a href=index>Home</a></li>
 <li><a href=ourproductspage>Products</a></li>
 </ul>
-<div class= hotdog>
+<div id= hotdog>
 <span></span>
 <span></span>
 <span></span>
 </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <script>
+
 $(document).ready(function() {
-$(‘.hotdog’).click(function() {
+$(‘#hotdog’).click(function() {
 $(‘#sidebar’).toggleClass(‘visible’);
 });
 });
+
 </script>
 
 <div class= title>
@@ -125,7 +127,7 @@ h4 {
   transition: left 0.3s linear;
   }
 
-.hotdog {
+#hotdog {
   display: inline-block;
   vertical-align: middle;
   width: 20px;
@@ -137,7 +139,7 @@ h4 {
   right: -60px;
   }
 
-.hotdog span {
+#hotdog span {
   height: 1px;
   background: white;
   margin-bottom: 5px;
