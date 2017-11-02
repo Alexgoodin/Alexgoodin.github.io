@@ -12,7 +12,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<div id= sidebar onclick=“sidebar()”>
+<div id= sidebar>
 <ul>
 <li><a href=index>Home</a></li>
 <li><a href=ourproductspage>Products</a></li>
@@ -117,10 +117,6 @@ h4 {
   text-decoration: none;
   }
 
-#sidebar.visible {
-  left: 0px;
-  }
-
 #hotdog {
   display: inline-block;
   vertical-align: middle;
@@ -141,6 +137,18 @@ h4 {
   border-radius: 1px;
   }
 
+#sidebar:hover {
+  background-color: rgb(68,95,129);
+  font-size: 30px;
+  }
+
+#sidebar:checked {
+  left: 0px;
+  }
+
+#sidebar:target {
+  left: 0px;
+  }
   </style>
 
     </html>
