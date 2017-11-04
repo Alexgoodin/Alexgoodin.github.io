@@ -11,27 +11,16 @@
   <body bgcolor= #4d6a8a>
 
 <div id= sidebar>
+<div class= toggle-btn onclick="toggleSidebar()">
+<span></span>
+<span></span>
+<span></span>
+</div>
 <ul>
 <li><a href=index>Home</a></li>
 <li><a href=ourproductspage>Products</a></li>
 </ul>
-  <button>
-<div id= hotdog>
-<span></span>
-<span></span>
-<span></span>
 </div>
-    </button>
-</div>
-
-<script>
-function sidebarOpen() {
-  document.toggleClass('.visible');
-}
-function sidebarClose() {
-  document.getElementByClassName('sidebar');
-}
-</script>
 
 <div class= title>
 <h1>
@@ -58,24 +47,21 @@ Newest Items
 </footer>
 
   <style>
-
 .title {
   text-align: center;
   color: white;
-  border: 100px solid white;
+  border: 10px solid white;
   width: 299px;
   margin: 200px auto;
   padding: 1px auto;
   font-size: 40px;
   }
-
 h4 {
   text-align: center;
   font-family: sans-serif;
   font-weight: 100;
   font-size: 36px;
   }
-
 .section {
   color: #4d6a8a;
   background-color: white;
@@ -83,69 +69,54 @@ h4 {
   height: 200px;
   padding: 7px;
   }
-
 .catchphrase {
   color: white;
   padding: 4px;
     }
-
 #sidebar {
   margin: 0px;
   padding: 0px;
   font-family: sans-serif;
-  background: #45607c;
+  background: rgba(69,96,124,0.5);
   width: 200px;
   height: 100%;
-  display: block;
   position: fixed;
-  top: 0px;
   left: -200px;
   }
-
-#sidebar.visible {
-  left: 0px
-    }
-#sidebar ul {
-  margin: 0px;
-  padding: 0px;
-  }
-
+#sidebar.active {
+    left: 0px;
+}
 #sidebar ul li {
+  padding: 15px 10px;
   list-style: none;
-  }
-
-#sidebar ul li a {
   color: white;
-  border-bottom: 1px solid white;
-  display: block;
-  width: 159px;
-  padding: 20px;
-  text-decoration: none;
+  font-family: "roboto", sans-serif;
   }
-
-#hotdog {
-  display: inline-block;
-  vertical-align: middle;
-  width: 20px;
-  height: 15px;
-  cursor: pointer;
-  margin: 20px;
+#sidebar .toggle-btn {
   position: absolute;
-  top: 0px;
-  right: -60px;
+  left: 230px;
+  top: 20px;
+  cursor: pointer;
   }
-
-#hotdog span {
-  height: 1px;
+#sidebar .toggle-btn span {
+  height: 2px;
+  width: 23px;
+  margin: 5px 0px;
   background: white;
-  margin-bottom: 5px;
   display: block;
   border-radius: 1px;
   }
-
-#sidebar:hover {
-  background-color: rgb(68,95,129);
-  }
+#sidebar ul li a {
+    text-decoration: none;
+    color: white;
+}
+#sidebar ul li a:hover {
+    color: rgba(255,255,255,0.7);
+}
   </style>
-
+<script>
+    function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle('active');
+}
+</script>
     </html>
