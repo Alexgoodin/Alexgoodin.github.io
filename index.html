@@ -56,12 +56,6 @@ Newest Items
   padding: 1px auto;
   font-size: 40px;
   }
-h4 {
-  text-align: center;
-  font-family: sans-serif;
-  font-weight: 100;
-  font-size: 36px;
-  }
 .section {
   color: #4d6a8a;
   background-color: white;
@@ -72,6 +66,10 @@ h4 {
 .catchphrase {
   color: white;
   padding: 4px;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 36px;
     }
 #sidebar {
   margin: 0px;
@@ -81,6 +79,7 @@ h4 {
   width: 200px;
   height: 100%;
   position: fixed;
+  top: 0px;
   left: -200px;
   }
 #sidebar.active {
@@ -101,7 +100,7 @@ h4 {
 #sidebar .toggle-btn span {
   height: 2px;
   width: 23px;
-  margin: 5px 0px;
+  margin: 5px;
   background: white;
   display: block;
   border-radius: 1px;
@@ -115,8 +114,10 @@ h4 {
 }
   </style>
 <script>
+
     function toggleSidebar() {
-    document.getElementById("sidebar").classList.toggle('active');
+document.getElementById("sidebar").classList.toggle('active');
 }
+
 </script>
     </html>
