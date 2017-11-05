@@ -22,10 +22,6 @@
 </ul>
 </div>
 
-<div class= topbar>
-<h4> Goody Sells. </h4>
-</div>
-
 <div class= title>
 <h1>
 Goody Sells.
@@ -60,6 +56,12 @@ Newest Items
   padding: 1px auto;
   font-size: 40px;
   }
+h4 {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 36px;
+  }
 .section {
   color: #4d6a8a;
   background-color: white;
@@ -70,10 +72,6 @@ Newest Items
 .catchphrase {
   color: white;
   padding: 4px;
-  text-align: center;
-  font-family: sans-serif;
-  font-weight: 100;
-  font-size: 36px;
     }
 #sidebar {
   margin: 0px;
@@ -83,10 +81,9 @@ Newest Items
   width: 200px;
   height: 100%;
   position: fixed;
-  top: 0px;
   left: -200px;
   }
-#sidebar .topbar .active {
+#sidebar.active {
     left: 0px;
 }
 #sidebar ul li {
@@ -104,7 +101,7 @@ Newest Items
 #sidebar .toggle-btn span {
   height: 2px;
   width: 23px;
-  margin: 5px;
+  margin: 5px 0px;
   background: white;
   display: block;
   border-radius: 1px;
@@ -119,7 +116,7 @@ Newest Items
   </style>
 <script>
     function toggleSidebar() {
-document.getElementById("sidebar").classList.toggle('active');
+    document.getElementById("sidebar").classList.toggle('active');
 }
 </script>
     </html>
