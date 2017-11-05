@@ -8,7 +8,7 @@
 
   </head>
 
-  <body>
+  <body bgcolor= red>
 
   </body>
 
@@ -38,10 +38,6 @@
 </footer>
 
   <style>
-* {
-  margin: 0px;
-  padding: 0px;
-  }
 header {
   background: #ff3233;
   height: 80px;
@@ -56,43 +52,49 @@ header {
   padding: 17px;
   }
 #sidebar {
-  position: fixed;
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  background: white;
   width: 200px;
   height: 100%;
-  top: 0px;
-  background: rgba(255,0,0,0.7);
+  position: fixed;
   left: -200px;
-  transition: all 500ms linear;
   }
+#sidebar.active {
+    left: 0px;
+}
 #sidebar ul li {
-  color: rgba(255,255,255,0.9);
-  list-style: none;
   padding: 15px 10px;
+  list-style: none;
+  color: white;
+  font-family: "roboto", sans-serif;
   }
-#sidebar ul li a {
-  text-decoration: none;
-  }
-#sidebar .hotdog {
+#sidebar .toggle-btn {
   position: absolute;
   left: 230px;
   top: 20px;
+  cursor: pointer;
   }
-#sidebar .hotdog span{
-  display: block;
-  width: 26px;
+#sidebar .toggle-btn span {
   height: 2px;
-  background: rgba(255,255,255,0.9);
-  margin: 8px 0px;
+  width: 23px;
+  margin: 5px 0px;
+  background: white;
+  display: block;
   border-radius: 1px;
   }
-#sidebar.active {
-  left: 0px;
-  }
+#sidebar ul li a {
+    text-decoration: none;
+    color: white;
+}
+#sidebar ul li a:hover {
+    color: rgba(255,255,255,0.7);
+}
   </style>
-
 <script>
-function toggleSidebar() {
-document.getElementById(“sidebar”).classList.toggle(‘active’);
+    function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle('active');
 }
 </script>
     </html>
