@@ -4,33 +4,26 @@
 
 <head>
 
-  <title>rn.</title>
+  <title>smh</title>
 
   </head>
 
-  <body bgcolor= red>
+  <body>
 
-  </body>
-
+</body>
 <header>
-<div class= headerx>
-<h1>rn.</h1>
-</div>
-
 <div id= sidebar>
-<div class= hotdog onclick= “toggleSidebar()”>
+<div class= toggle-btn onclick="toggleSidebar()">
 <span></span>
 <span></span>
 <span></span>
 </div>
 <ul>
-<li>Home</li>
-<li>My page</li>
-<li>Feed</li>
-<li>About</li>
+<li><a href=index>Home</a></li>
+<li><a href=ourproductspage>My page</a></li>
 </ul>
 </div>
-
+<h1>SMH.</h1>
 </header>
 
 <footer>
@@ -38,28 +31,17 @@
 </footer>
 
   <style>
-header {
-  background: #ff3233;
-  height: 80px;
-  width: 100%;
-  border-bottom: 1px solid #cc0000;
-  }
-.headerx {
-  color: white;
-  font-family: serif;
-  text-align: center;
-  font-size: 15px;
-  padding: 17px;
-  }
 #sidebar {
   margin: 0px;
   padding: 0px;
   font-family: sans-serif;
-  background: white;
+  background: rgba(250,34,69,0.5);
   width: 200px;
   height: 100%;
   position: fixed;
+  top: 0px;
   left: -200px;
+  transition: all 100ms linear;
   }
 #sidebar.active {
     left: 0px;
@@ -91,6 +73,31 @@ header {
 #sidebar ul li a:hover {
     color: rgba(255,255,255,0.7);
 }
+.toggle-btn span:hover {
+  background-color: #ff7f7f;
+  border-radius: 10px;
+  }
+header {
+  background-color: #ff3232;
+  margin: 0px;
+  padding: 0px;
+  height: 63px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  border-bottom: 1px solid #c90707;
+}
+header h1 {
+  font-family: serif;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  font-size: 56px;
+  margin: 0px;
+  padding: 0px;
+  }
   </style>
 <script>
     function toggleSidebar() {
