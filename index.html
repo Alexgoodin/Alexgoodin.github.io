@@ -29,7 +29,29 @@
 </header>
 
 <body>
-<h1 class= smhcover>SMH.</h1>
+<h1 class= smhcover>SMH</h1>
+<button class="signupbtn" onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label><b>Repeat Password</b></label>
+      <input type="password" placeholder="Confirm Password" name="psw-repeat" required>
+      <input type="checkbox" checked="checked"> Remember me
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn1">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
 </body>
 
 <footer>
@@ -94,7 +116,7 @@
         color: white;
         font-weight: bold;
         text-align: center;
-        font-size: 56px;
+        font-size: 50px;
         margin: 0px;
         padding: 0px;
     }
@@ -106,7 +128,7 @@
         padding: 0px;
     }
     html {
-        background: url("phonto-1.PNG") no-repeat center center fixed; 
+        background: #ff5a5a no-repeat center center fixed; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -115,12 +137,98 @@
     .smhcover {
         font-family: serif;
         color: white;
-        font-size: 100px;
+        font-size: 200px;
         text-align: center;
-        position: relative;
         z-index: -1;
         margin: 563px auto;
+        margin-bottom: 100px;
     }
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.signupbtn {
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 30px;
+    position: initial;
+    right: 25%;
+    left: 25%;
+    padding: 15px;
+    font-family: serif;
+    position: relative;
+    border: 3px solid white;
+    height: 100px;
+    width: 50%;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+.cancelbtn,.signupbtn1 {
+    float: left;
+    width: 50%;
+}
+.container {
+    padding: 16px;
+}
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+    border-radius: 5px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+@media screen and (max-width: 500px) {
+    .cancelbtn, .signupbtn {
+        width: 100%;
+        position: initial;
+        right: 0%;
+        left: 0%;
+        font-size: 25px;
+    }
+    .smhcover {
+        font-size: 100px;
+    }
+}
 </style>
 <script>
     function toggleSidebar() {
