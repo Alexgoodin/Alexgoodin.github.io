@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>smh</title>
+</head>
+
+<header>
+    <div id=sidebar>
+        <div class=toggle-btn onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul>
+            <li><a href=index>Home</a>
+            </li>
+            <li><a href=mypage>My page</a>
+            </li>
+        </ul>
+    </div>
+    <div class=headerTitle>
+        <h1><a href=index>SMH.</a></h1>
+    </div>
+</header>
+
+<body>
+</body>
+
+<footer>
+
+</footer>
+<style>
+    #sidebar {
+        margin: 0px;
+        padding: 0px;
+        font-family: sans-serif;
+        background: rgba(250, 34, 69, 0.5);
+        width: 200px;
+        height: 100%;
+        position: fixed;
+        top: 0px;
+        left: -200px;
+        transition: all 100ms linear;
+    }
+    #sidebar.active {
+        left: 0px;
+    }
+    #sidebar ul li {
+        padding: 15px 10px;
+        list-style: none;
+        color: white;
+        font-family: "roboto", sans-serif;
+    }
+    #sidebar .toggle-btn {
+        position: absolute;
+        left: 230px;
+        top: 20px;
+        cursor: pointer;
+    }
+    #sidebar .toggle-btn span {
+        height: 2px;
+        width: 23px;
+        margin: 5px 0px;
+        background: white;
+        display: block;
+        border-radius: 1px;
+    }
+    #sidebar ul li a {
+        text-decoration: none;
+        color: white;
+    }
+    #sidebar ul li a:hover {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    header {
+        background-color: #ff3232;
+        margin: 0px;
+        padding: 0px;
+        height: 63px;
+        width: 100%;
+        border-bottom: 1px solid #c90707;
+        position: fixed;
+        top:0px;
+        left: 0px;
+    }
+    header h1 {
+        font-family: serif;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        font-size: 50px;
+        margin: 0px;
+        padding: 0px;
+    }
+    .headerTitle a {
+        text-decoration: none;
+        color: rgb(255,255,255);
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+    }
+    html {
+        background: #ff5a5a no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .smhcover {
+        font-family: serif;
+        color: white;
+        font-size: 200px;
+        text-align: center;
+        z-index: -1;
+        margin: 563px auto;
+        margin-bottom: 100px;
+    }
+    input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.signupbtn {
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 30px;
+    position: initial;
+    right: 25%;
+    left: 25%;
+    padding: 15px;
+    font-family: serif;
+    position: relative;
+    border: 3px solid white;
+    height: 100px;
+    width: 50%;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+.cancelbtn,.signupbtn1 {
+    float: left;
+    width: 50%;
+}
+.container {
+    padding: 16px;
+}
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+    border-radius: 5px;
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+@media screen and (max-width: 500px) {
+    .cancelbtn, .signupbtn {
+        width: 100%;
+        position: initial;
+        right: 0%;
+        left: 0%;
+        font-size: 25px;
+    }
+    .smhcover {
+        font-size: 100px;
+    }
+}
+</style>
+<script>
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle('active');
+    }
+</script>
+
+</html>
