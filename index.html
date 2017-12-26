@@ -18,7 +18,7 @@
         </div>
         <ul>
             <li><a href=index>Home</a></li>
-            <li><a href=login>Login</a></li>
+            <li><a href=login>Loginp</a></li>
             <li><a href=mypage>My Page</a></li>
         </ul>
     </div>
@@ -28,34 +28,25 @@
 </header>
 
 <body>
-
+<h1 class= smhcover>SMH</h1>
+<button class="signupbtn" onclick="document.getElementById('id01').style.display='block'"><a href=signup>Sign Up</a></button>
 </body>
 
 <footer>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- smh -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9571489119560159"
-     data-ad-slot="7886209679"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+
 </footer>
 <style>
     #sidebar {
         margin: 0px;
         padding: 0px;
         font-family: sans-serif;
-        background: #ff3232;
+        background: rgba(250, 34, 69, 0.5);
         width: 200px;
         height: 100%;
         position: fixed;
         top: 0px;
-        left: -201px;
+        left: -200px;
         transition: all 100ms linear;
-        border-right: 1px solid white;
     }
     #sidebar.active {
         left: 0px;
@@ -121,12 +112,51 @@
         -o-background-size: cover;
         background-size: cover;
     }
+    .smhcover {
+        font-family: serif;
+        color: white;
+        font-size: 200px;
+        text-align: center;
+        z-index: -1;
+        margin: 563px auto;
+        margin-bottom: 100px;
+    }
+.signupbtn {
+    background-color: rgba(255,255,255,0.2);
+    font-size: 30px;
+    position: initial;
+    right: 25%;
+    left: 25%;
+    padding: 15px;
+    font-family: serif;
+    position: relative;
+    border: 3px solid white;
+    height: 100px;
+    width: 50%;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.signupbtn a {
+    color: white;
+    text-decoration: none;
+}
+@media screen and (max-width: 500px) {
+    .cancelbtn, .signupbtn {
+        width: 100%;
+        position: initial;
+        right: 0%;
+        left: 0%;
+        font-size: 25px;
+    }
+    .smhcover {
+        font-size: 100px;
+    }
+}
 </style>
 <script>
     function toggleSidebar() {
         document.getElementById("sidebar").classList.toggle('active');
     }
-
 </script>
 
 </html>
